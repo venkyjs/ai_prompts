@@ -58,122 +58,104 @@ Return the single PRD document—nothing else.
 ## Claude 4 Opus
 
 ```
-You are an experienced Product Manager tasked with writing a comprehensive Product Requirements Document (PRD). 
+You are an experienced Product Manager. Transform the rough draft requirements below into a comprehensive, well-structured Product Requirements Document (PRD).
 
-CONTEXT:
-- Product Name: [PRODUCT NAME]
-- Product Type: [e.g., Mobile App, Web Platform, API, Hardware Device]
-- Target Industry: [INDUSTRY]
-- Development Stage: [Concept/MVP/Enhancement/Redesign]
-- Target Launch Date: [DATE]
-- Budget Constraints: [if any]
-- Team Size: [NUMBER] developers, [NUMBER] designers
+ROUGH DRAFT REQUIREMENTS:
+"""
+[INSERT YOUR ROUGH DRAFT HERE]
+"""
 
-Write a detailed PRD following this structure:
+INSTRUCTIONS:
 
-1. EXECUTIVE SUMMARY (1-2 paragraphs)
-   - Product vision in one sentence
-   - Key value proposition
-   - Primary target audience
-   - Expected business impact
+1. EXTRACT AND ORGANIZE:
+   - Carefully read through the entire rough draft
+   - Identify all requirements, features, and constraints mentioned
+   - Categorize information into appropriate PRD sections
+   - Preserve ALL specific details, numbers, and examples from the original
 
-2. PROBLEM STATEMENT
-   - Current state and pain points (use specific data/examples)
-   - Why existing solutions fall short
-   - Market opportunity size
+2. CREATE THE PRD with these sections:
 
-3. GOALS AND OBJECTIVES
-   - Business goals (quantifiable)
-   - User goals
-   - Technical goals
-   - Success criteria for each goal
+   **EXECUTIVE SUMMARY**
+   - Synthesize the core product vision from the draft
+   - Highlight the main value proposition
+   - State primary objectives
 
-4. USER PERSONAS (2-3 primary personas)
-   For each persona include:
-   - Name and demographics
-   - Job-to-be-done
-   - Pain points
-   - Technical proficiency
-   - Usage context
+   **PROBLEM STATEMENT**
+   - Extract pain points and challenges from the draft
+   - Articulate why this product is needed
+   - Include any market context mentioned
 
-5. USER STORIES
-   Format: "As a [persona], I want to [action] so that [benefit]"
-   - Group by epic/theme
-   - Include acceptance criteria for each story
-   - Mark priority (P0-Critical, P1-High, P2-Medium, P3-Low)
+   **SCOPE AND OBJECTIVES**
+   - List all goals mentioned or implied in the draft
+   - Make objectives SMART (Specific, Measurable, Achievable, Relevant, Time-bound)
+   - Distinguish between must-haves and nice-to-haves
 
-6. FUNCTIONAL REQUIREMENTS
-   For each requirement specify:
-   - Feature description
-   - User flow
-   - Input/Output
-   - Business rules
-   - Priority level
-   - Dependencies
+   **USER PERSONAS AND USE CASES**
+   - Identify all user types mentioned
+   - Create personas based on described user needs
+   - Extract use cases and user journeys from the draft
 
-7. NON-FUNCTIONAL REQUIREMENTS
-   - Performance (load times, concurrent users)
-   - Security requirements
-   - Accessibility standards
-   - Browser/device compatibility
-   - Scalability needs
-   - Data privacy compliance
+   **FUNCTIONAL REQUIREMENTS**
+   - List every feature mentioned in the draft
+   - Add detail where the draft is vague
+   - Group related features together
+   - Assign priorities (P0-Critical to P3-Nice-to-have)
+   - Format: [REQ-ID] [Priority] [Requirement] [Acceptance Criteria]
 
-8. SUCCESS METRICS & KPIs
-   - North Star metric
-   - Leading indicators
-   - Lagging indicators
-   - Measurement methodology
-   - Baseline and targets
+   **NON-FUNCTIONAL REQUIREMENTS**
+   - Extract any mentioned performance, security, or quality requirements
+   - Infer standard requirements if not explicitly stated
+   - Include technical constraints from the draft
 
-9. TECHNICAL CONSIDERATIONS
-   - Architecture overview
-   - API requirements
-   - Third-party integrations
-   - Data models
-   - Technology constraints
+   **USER STORIES**
+   - Convert requirements into user story format where applicable
+   - Format: "As a [user type], I want [feature] so that [benefit]"
+   - Include acceptance criteria
 
-10. COMPETITIVE ANALYSIS
-    - Key competitors and their solutions
-    - Our differentiation
-    - Feature comparison matrix
+   **SUCCESS METRICS**
+   - Extract any mentioned KPIs or success criteria
+   - Propose additional relevant metrics if few are mentioned
+   - Define how each will be measured
 
-11. TIMELINE AND MILESTONES
-    - Phase 1 (MVP): [Features and date]
-    - Phase 2: [Features and date]
-    - Phase 3: [Features and date]
-    - Key dependencies and critical path
+   **DEPENDENCIES AND ASSUMPTIONS**
+   - List all dependencies mentioned in the draft
+   - State assumptions made to fill gaps
+   - Identify technical or business constraints
 
-12. RISKS AND MITIGATION
-    - Technical risks
-    - Business risks
-    - User adoption risks
-    - Mitigation strategies for each
+   **TIMELINE AND MILESTONES**
+   - Extract any dates or timeline information
+   - Propose a phased approach if not specified
+   - Identify MVP vs. future phases
 
-13. OUT OF SCOPE
-    - Features explicitly not included in this version
-    - Future considerations
+   **RISKS AND MITIGATION**
+   - Identify risks mentioned or implied in the draft
+   - Propose mitigation strategies
 
-14. APPENDICES
-    - Mockups/wireframes references
-    - Technical specifications links
-    - Research data
-    - Glossary of terms
+   **GAPS AND CLARIFICATIONS NEEDED**
+   - Create a list of questions about unclear requirements
+   - Identify missing information that would typically be in a PRD
+   - Flag any contradictions in the draft
 
-WRITING GUIDELINES:
-- Use clear, concise language avoiding jargon
-- Be specific with numbers, dates, and requirements
-- Use tables and bullet points for easy scanning
-- Include rationale for major decisions
-- Write for an audience of developers, designers, and stakeholders
-- Maintain consistent terminology throughout
+3. VALIDATION CHECKLIST:
+   After creating the PRD, confirm:
+   ✓ All requirements from the rough draft are included
+   ✓ No original intent has been lost or misinterpreted
+   ✓ Specific examples and details are preserved
+   ✓ The structure improves clarity without losing content
 
-OUTPUT FORMAT:
-- Use markdown formatting
-- Include a table of contents with links
-- Number all requirements for easy reference
-- Use tables for comparative information
-- Highlight critical path items and blockers
+4. FORMAT:
+   - Use clear headers and numbering
+   - Include a table of contents
+   - Use tables for requirement lists
+   - Bold key terms and priorities
+   - Use bullet points for clarity
+
+5. TONE:
+   - Professional but accessible
+   - Avoid adding jargon not present in the original
+   - Maintain the domain-specific language from the draft
+
+Mark any sections where you've made assumptions or need clarification with [NEEDS CLARIFICATION] tags.
 ```
 
 ## GPT 4.1
